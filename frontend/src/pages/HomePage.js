@@ -112,15 +112,18 @@ const HomePage = () => {
       <Layout title={"ALl Products - Best offers "}>
         {/* banner image */}
         <img
-          src="/images/banner.png"
+          src="https://hodinkee.imgix.net/uploads/images/85867caf-a6ca-45ec-8abc-eae50c39cfd0/WODHEROFINAL4.jpg?ixlib=rails-1.1.0&fm=jpg&q=55&auto=format&usm=12&fit=crop&ch=Width%2CDPR%2CSave-Data&alt=&ar=16%3A9&w=1760"
           className="banner-img"
           alt="bannerimage"
+          height={"400px"}
           width={"100%"}
+         
         />
         {/* banner image */}
         <div className="container-fluid row mt-3 home-page">
           <div className="col-md-3 filters">
             <h4 className="text-center">Filter By Category</h4>
+           
             <div className="d-flex flex-column">
               {categories?.map((c) => (
                 <Checkbox
@@ -167,7 +170,7 @@ const HomePage = () => {
                       <h5 className="card-title card-price">
                         {p.price.toLocaleString("en-US", {
                           style: "currency",
-                          currency: "USD",
+                          currency: "INR",
                         })}
                       </h5>
                     </div>
