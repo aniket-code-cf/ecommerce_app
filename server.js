@@ -9,7 +9,7 @@ import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import path from 'path'
 
-const __dirname = path.resolve();
+//const __dirname = path.resolve();
 
 
 //configure env
@@ -25,6 +25,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 app.use(express.static(path.join(__dirname,'./frontend/build')));
 
 //routes
